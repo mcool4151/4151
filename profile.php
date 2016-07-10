@@ -1,5 +1,6 @@
 <?php
-if (isset($_SESSION['email'])){
+session_start();
+if ($_SESSION['loggedin'] == 1){
   echo "You are logged in";
 }
 else {

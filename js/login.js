@@ -21,6 +21,7 @@ $(document).ready(function(){
         data:$("#login").serialize(),
         success:function(result){
           if(result == 1){
+            window.location.assign("http://localhost/profile.php");
           }
           else {
             $('.status').html(result);

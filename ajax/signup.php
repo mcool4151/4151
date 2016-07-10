@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once 'dbcon.php';
 
 $email = $_POST['email'];

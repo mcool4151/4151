@@ -1,7 +1,8 @@
 <?php
+session_start();
 include 'dbcon.php';
 $uname = $_POST['username'];
-$pass = md5($_POST['password']);
+$pass = $_POST['password'];
 $sql = "select * from users where u_email='$uname' AND u_password='$pass'";
 $res = $conn->query($sql);
 if($res->num_rows >0){
@@ -12,5 +13,4 @@ if($res->num_rows >0){
   echo 1;
 }
 else echo "Invalid Credentials";
-echo $sql;
 ?>
